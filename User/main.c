@@ -46,17 +46,17 @@ int main(void)
 	while(1)
 	{
 		Delay_ms(1);
-		if(sResult->OpenState == 1 )
+		if(sResult->OpenState == sRes_Open )
 		{
 			Process_Start();
 		}
 		
-		if(sResult->OpenState == 2 )
+		if(sResult->OpenState == sRes_Close )
 		{
-			Process_End();
+			Process_Close();
 		}
 		
-		if(sResult->OpenState == 3 )
+		if(sResult->OpenState == sRes_Pause )
 		{
 			//Process_Pause();
 		}

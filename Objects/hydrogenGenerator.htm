@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\hydrogenGenerator.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\hydrogenGenerator.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Jun 04 02:29:50 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Jun 04 15:46:14 2026
 <BR><P>
 <H3>Maximum Stack Usage =         56 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -440,7 +440,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Process_End
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Process_Close
 </UL>
 
 <P><STRONG><a name="[54]"></a>Fan_ON</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, fan.o(i.Fan_ON))
@@ -515,8 +515,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[59]"></a>Process_End</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, process.o(i.Process_End))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Process_End &rArr; Fan_OFF
+<P><STRONG><a name="[59]"></a>Process_Close</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, process.o(i.Process_Close))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Process_Close &rArr; Fan_OFF
 </UL>
 <BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Fan_OFF
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Valve_OFF
@@ -611,7 +611,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Process_End
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Process_Close
 </UL>
 
 <P><STRONG><a name="[5e]"></a>Relay_ON</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, relay.o(i.Relay_ON))
@@ -690,7 +690,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Process_End
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Process_Close
 </UL>
 
 <P><STRONG><a name="[5d]"></a>Valve_ON</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, valve.o(i.Valve_ON))
@@ -705,7 +705,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = main &rArr; SystemCLK_Init &rArr; RCC_WaitForHSEStartUp &rArr; RCC_GetFlagStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Process_Start
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Process_End
+<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Process_Close
 <LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Fan_Init
 <LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Valve_Init
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Screen_Init

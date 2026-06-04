@@ -17,7 +17,7 @@ void Process_Start(void)
 	
 }
 	
-void Process_End(void)
+void Process_Close(void)
 {
 	Fan_OFF();
 	Valve_OFF();

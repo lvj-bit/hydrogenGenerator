@@ -180,9 +180,9 @@ Section Cross References
     fan.o(i.Fan_OFF) refers to stm32f10x_gpio.o(i.GPIO_SetBits) for GPIO_SetBits
     fan.o(i.Fan_ON) refers to stm32f10x_gpio.o(i.GPIO_ResetBits) for GPIO_ResetBits
     process.o(i.Fan_Pause) refers to relay.o(i.Relay_OFF) for Relay_OFF
-    process.o(i.Process_End) refers to fan.o(i.Fan_OFF) for Fan_OFF
-    process.o(i.Process_End) refers to valve.o(i.Valve_OFF) for Valve_OFF
-    process.o(i.Process_End) refers to relay.o(i.Relay_OFF) for Relay_OFF
+    process.o(i.Process_Close) refers to fan.o(i.Fan_OFF) for Fan_OFF
+    process.o(i.Process_Close) refers to valve.o(i.Valve_OFF) for Valve_OFF
+    process.o(i.Process_Close) refers to relay.o(i.Relay_OFF) for Relay_OFF
     process.o(i.Process_Start) refers to fan.o(i.Fan_ON) for Fan_ON
     process.o(i.Process_Start) refers to valve.o(i.Valve_ON) for Valve_ON
     process.o(i.Process_Start) refers to relay.o(i.Relay_ON) for Relay_ON
@@ -199,7 +199,7 @@ Section Cross References
     main.o(i.main) refers to fan.o(i.Fan_Init) for Fan_Init
     main.o(i.main) refers to delay.o(i.Delay_ms) for Delay_ms
     main.o(i.main) refers to process.o(i.Process_Start) for Process_Start
-    main.o(i.main) refers to process.o(i.Process_End) for Process_End
+    main.o(i.main) refers to process.o(i.Process_Close) for Process_Close
     main.o(i.main) refers to screen.o(.data) for sResult
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
     __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
@@ -979,7 +979,7 @@ Image Symbol Table
     i.NMI_Handler                            0x08000490   Section        0  stm32f10x_it.o(i.NMI_Handler)
     i.PendSV_Handler                         0x08000492   Section        0  stm32f10x_it.o(i.PendSV_Handler)
     i.Pressure_Init                          0x08000494   Section        0  pressure.o(i.Pressure_Init)
-    i.Process_End                            0x080004c0   Section        0  process.o(i.Process_End)
+    i.Process_Close                          0x080004c0   Section        0  process.o(i.Process_Close)
     i.Process_Start                          0x080004d0   Section        0  process.o(i.Process_Start)
     i.RCC_APB2PeriphClockCmd                 0x080004e0   Section        0  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
     i.RCC_DeInit                             0x08000500   Section        0  stm32f10x_rcc.o(i.RCC_DeInit)
@@ -1180,7 +1180,7 @@ Image Symbol Table
     NMI_Handler                              0x08000491   Thumb Code     2  stm32f10x_it.o(i.NMI_Handler)
     PendSV_Handler                           0x08000493   Thumb Code     2  stm32f10x_it.o(i.PendSV_Handler)
     Pressure_Init                            0x08000495   Thumb Code    38  pressure.o(i.Pressure_Init)
-    Process_End                              0x080004c1   Thumb Code    16  process.o(i.Process_End)
+    Process_Close                            0x080004c1   Thumb Code    16  process.o(i.Process_Close)
     Process_Start                            0x080004d1   Thumb Code    16  process.o(i.Process_Start)
     RCC_APB2PeriphClockCmd                   0x080004e1   Thumb Code    26  stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd)
     RCC_DeInit                               0x08000501   Thumb Code    64  stm32f10x_rcc.o(i.RCC_DeInit)
@@ -1306,7 +1306,7 @@ Memory Map of the image
     0x08000490   0x08000490   0x00000002   Code   RO         3734    i.NMI_Handler       stm32f10x_it.o
     0x08000492   0x08000492   0x00000002   Code   RO         3735    i.PendSV_Handler    stm32f10x_it.o
     0x08000494   0x08000494   0x0000002c   Code   RO         3479    i.Pressure_Init     pressure.o
-    0x080004c0   0x080004c0   0x00000010   Code   RO         3614    i.Process_End       process.o
+    0x080004c0   0x080004c0   0x00000010   Code   RO         3614    i.Process_Close     process.o
     0x080004d0   0x080004d0   0x00000010   Code   RO         3615    i.Process_Start     process.o
     0x080004e0   0x080004e0   0x00000020   Code   RO         1777    i.RCC_APB2PeriphClockCmd  stm32f10x_rcc.o
     0x08000500   0x08000500   0x0000004c   Code   RO         1784    i.RCC_DeInit        stm32f10x_rcc.o
@@ -1366,10 +1366,10 @@ Image component sizes
         96          4          0          0          0        507   main.o
          0          0          0          0          0     201644   misc.o
         44          6          0          0          0        440   pressure.o
-        32          0          0          0          0        806   process.o
+        32          0          0          0          0        808   process.o
        102          0          0          0          0        569   rcc.o
         76         14          0          0          0       1200   relay.o
-        44          4          0          4          0       1136   screen.o
+        44          4          0          4          0       1216   screen.o
         64         26        236          0       1536        784   startup_stm32f10x_md.o
         52         12          0          0          0        949   stm32f10x_flash.o
        286          0          0          0          0      11004   stm32f10x_gpio.o
@@ -1380,7 +1380,7 @@ Image component sizes
         76         14          0          0          0       1200   valve.o
 
     ----------------------------------------------------------------------
-      1962        204        268          4       1536     258092   Object Totals
+      1962        204        268          4       1536     258174   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          6          0          0          0          0          0   (incl. Padding)
 
@@ -1429,8 +1429,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      2240        220        268          4       1636     256228   Grand Totals
-      2240        220        268          4       1636     256228   ELF Image Totals
+      2240        220        268          4       1636     256310   Grand Totals
+      2240        220        268          4       1636     256310   ELF Image Totals
       2240        220        268          4          0          0   ROM Totals
 
 ==============================================================================

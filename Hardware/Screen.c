@@ -12,7 +12,7 @@ void Screen_Init(void)
 	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOA, &GPIO_InitStruct);	
 	
-	//sResult.OpenState = 0;
+	//sResult.OpenState = sRes_Init;
 }
 
 

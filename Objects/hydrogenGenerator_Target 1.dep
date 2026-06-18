@@ -1025,8 +1025,8 @@ I (.\Library\stm32f10x_usart.h)(0x4D783BB4)
 I (.\Library\stm32f10x_wwdg.h)(0x4D783BB4)
 I (.\Library\misc.h)(0x4D783BB4)
 I (Hardware\Pressure.h)(0x6A2057D6)
-F (.\Hardware\Temperature.h)(0x6A205FCE)()
-F (.\Hardware\Temperature.c)(0x6A2061B8)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\User -I .\Library -I .\Hardware -I .\System-I.\RTE\_Target_1-ID:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-ID:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\temperature.o --omf_browse .\objects\temperature.crf --depend .\objects\temperature.d)
+F (.\Hardware\Temperature.h)(0x6A33B3D0)()
+F (.\Hardware\Temperature.c)(0x6A33B527)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\User -I .\Library -I .\Hardware -I .\System-I.\RTE\_Target_1-ID:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-ID:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\temperature.o --omf_browse .\objects\temperature.crf --depend .\objects\temperature.d)
 I (.\Start\stm32f10x.h)(0x4D783CB4)
 I (.\Start\core_cm3.h)(0x4D523B58)
 I (D:\Keil5\ARM\ARMCC\include\stdint.h)(0x588B8344)
@@ -1055,7 +1055,9 @@ I (.\Library\stm32f10x_tim.h)(0x4D783BB4)
 I (.\Library\stm32f10x_usart.h)(0x4D783BB4)
 I (.\Library\stm32f10x_wwdg.h)(0x4D783BB4)
 I (.\Library\misc.h)(0x4D783BB4)
-I (Hardware\Temperature.h)(0x6A205FCE)
+I (Hardware\Temperature.h)(0x6A33B3D0)
+I (.\System\Delay.h)(0x6130920D)
+I (D:\Keil5\ARM\ARMCC\include\math.h)(0x588B8344)
 F (.\Hardware\Hydrogen.h)(0x6A206197)()
 F (.\Hardware\Hydrogen.c)(0x6A2061EB)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Start -I .\User -I .\Library -I .\Hardware -I .\System-I.\RTE\_Target_1-ID:\Keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.4.1\Device\Include-ID:\Keil5\ARM\CMSIS\Include-D__UVISION_VERSION="524" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER-o .\objects\hydrogen.o --omf_browse .\objects\hydrogen.crf --depend .\objects\hydrogen.d)
 I (.\Start\stm32f10x.h)(0x4D783CB4)
@@ -1213,7 +1215,7 @@ I (.\Library\misc.h)(0x4D783BB4)
 I (Hardware\Relay.h)(0x6A205FD5)
 I (Hardware\Liquid.h)(0x6A205786)
 I (Hardware\Pressure.h)(0x6A2057D6)
-I (Hardware\Temperature.h)(0x6A205FCE)
+I (Hardware\Temperature.h)(0x6A33B3D0)
 I (Hardware\Hydrogen.h)(0x6A206197)
 I (Hardware\Screen.h)(0x6A212CF6)
 I (Hardware\Valve.h)(0x6A20671B)
@@ -1289,7 +1291,7 @@ I (.\Hardware\rcc.h)(0x6A205761)
 I (.\Hardware\Relay.h)(0x6A205FD5)
 I (.\Hardware\Liquid.h)(0x6A205786)
 I (.\Hardware\Pressure.h)(0x6A2057D6)
-I (.\Hardware\Temperature.h)(0x6A205FCE)
+I (.\Hardware\Temperature.h)(0x6A33B3D0)
 I (.\Hardware\Hydrogen.h)(0x6A206197)
 I (.\Hardware\Screen.h)(0x6A212CF6)
 I (.\Hardware\Valve.h)(0x6A20671B)

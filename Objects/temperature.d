@@ -29,3 +29,5 @@
 .\objects\temperature.o: .\Library\stm32f10x_wwdg.h
 .\objects\temperature.o: .\Library\misc.h
 .\objects\temperature.o: Hardware\Temperature.h
+.\objects\temperature.o: .\System\Delay.h
+.\objects\temperature.o: D:\Keil5\ARM\ARMCC\Bin\..\include\math.h
